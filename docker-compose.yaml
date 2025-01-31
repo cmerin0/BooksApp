@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:alpine
+    container_name: book_db
+    environment:
+      - POSTGRES_DB=book_db
+      - POSTGRES_USER=bookuser
+      - POSTGRES_PASSWORD=bookpass
+    ports:
+      - "2345:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: always
+  redis:
+    image: redis:alpine
+    container_name: book_cache
+    ports:
+      - "9736:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+volumes:
+  pg_data:
+  redis_data:

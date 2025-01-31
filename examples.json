@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Don Quijote de la Mancha",
+        "author": "Miguel de Cervantes",
+        "description": "La historia de un hidalgo que pierde la cordura por leer libros de caballería y decide convertirse en caballero andante.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Don_Quijote_and_Sancho_Panza.jpg",
+        "availability": true
+    },
+    {
+        "title": "Cien años de soledad",
+        "author": "Gabriel García Márquez",
+        "description": "La historia de la familia Buendía a lo largo de varias generaciones en el pueblo ficticio de Macondo.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/0/0b/Cien_a%C3%B1os_de_soledad_%28book_cover%29.jpg",
+        "availability": true
+    },
+    {
+        "title": "La sombra del viento",
+        "author": "Carlos Ruiz Zafón",
+        "description": "Un joven llamado Daniel descubre un libro que cambiará su vida y lo llevará a desentrañar un misterio en la Barcelona de la posguerra.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/6/6b/La_sombra_del_viento.jpg",
+        "availability": true
+    },
+    {
+        "title": "La casa de los espíritus",
+        "author": "Isabel Allende",
+        "description": "Una saga familiar que abarca varias generaciones y mezcla elementos de realismo mágico en un país latinoamericano no identificado.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/3/3d/La_casa_de_los_esp%C3%ADritus.jpg",
+        "availability": true
+    },
+    {
+        "title": "El amor en los tiempos del cólera",
+        "author": "Gabriel García Márquez",
+        "description": "Una historia de amor que abarca más de cincuenta años entre Fermina Daza y Florentino Ariza.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/5/5b/El_amor_en_los_tiempos_del_c%C3%B3lera.jpg",
+        "availability": true
+    },
+    {
+        "title": "Pedro Páramo",
+        "author": "Juan Rulfo",
+        "description": "La historia de Juan Preciado, quien viaja al pueblo de Comala para encontrar a su padre, Pedro Páramo, solo para descubrir un lugar lleno de fantasmas y recuerdos.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/4/4d/Pedro_Paramo.jpg",
+        "availability": true
+    },
+    {
+        "title": "Rayuela",
+        "author": "Julio Cortázar",
+        "description": "Una novela experimental que puede leerse de múltiples maneras, siguiendo la vida de Horacio Oliveira en París y Buenos Aires.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/1/1d/Rayuela_%28Julio_Cort%C3%A1zar%29.jpg",
+        "availability": true
+    },
+    {
+        "title": "El túnel",
+        "author": "Ernesto Sabato",
+        "description": "La historia de un pintor llamado Juan Pablo Castel, quien comete un crimen y reflexiona sobre su vida y sus obsesiones.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/8/8d/El_t%C3%BAnel.jpg",
+        "availability": true
+    },
+    {
+        "title": "Ficciones",
+        "author": "Jorge Luis Borges",
+        "description": "Una colección de cuentos que exploran temas como la realidad, la identidad y el infinito, con un estilo literario único.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Ficciones.jpg",
+        "availability": true
+    },
+    {
+        "title": "Los detectives salvajes",
+        "author": "Roberto Bolaño",
+        "description": "La historia de un grupo de poetas en busca de una misteriosa escritora en México y otros lugares del mundo.",
+        "cover_url": "https://upload.wikimedia.org/wikipedia/en/0/0b/Los_detectives_salvajes.jpg",
+        "availability": true
+    }
+]
