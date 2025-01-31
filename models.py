@@ -18,4 +18,3 @@ class Book(Base):
 
     def __repr__(self):
         return f"<Book {self.id}, title: '{self.title}', author: '{self.author}'>"
-

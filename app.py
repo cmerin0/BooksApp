@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from models import Base, Book
+from models import Book
+from db.conn import session
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import os
@@ -18,18 +17,9 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
-# Create database connection
-DATABASE_URL = os.getenv('DATABASE_URL')
-engine = create_engine(DATABASE_URL)
-Session = sessionmaker(bind=engine)
-session = Session()
-
 # Setting up Redis connection
 REDIS_URL = os.getenv('REDIS_URL', 'redis://localhost:9736/0')
 redis_client = redis.Redis.from_url(REDIS_URL)
-
-# Create tables
-Base.metadata.create_all(engine)
 
 # Helper function to get a cache key
 def get_cache_key(endpoint, book_id=None):
