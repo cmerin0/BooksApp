@@ -52,9 +52,10 @@ services:
     image: nginx
     container_name: book_proxy
     ports:
-      - "85:80"
+      - "444:443"
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs/:/etc/nginx/certs/
     depends_on:
       - flaskapp
     networks:
@@ -67,5 +68,5 @@ volumes:
 
 networks:
   backend-net:
-    driver: bridge
     name: backend-net
+    driver: bridge
