@@ -1,9 +1,20 @@
 # Simple Book App Installation Guide
 
-This repository provides a simple setup to get your Docker Compose environment up and running.
+## Project Purpose
+
+The Simple Book App is designed to provide a straightforward API for managing a collection of books. It leverages several key technologies to ensure efficient and reliable operation:
+
+- **PostgreSQL**: Serves as the primary database for storing book information.
+- **Redis**: Acts as a cache to handle frequent requests and improve performance.
+- **Flask**: Functions as the web server framework to handle API requests.
+- **Gunicorn**: Utilized as the WSGI server to run the Flask application.
+- **Nginx**: Configured as a reverse proxy to manage incoming traffic and provide SSL termination.
+
+This setup ensures a robust and scalable environment for the book management API, making it easy to deploy and maintain.
 
 ## Prerequisites
 
+This repository provides a simple setup to get your Docker Compose environment up and running.
 Before you begin, ensure you have the following installed on your system:
 
 - **Docker**: [Download Docker](https://www.docker.com/get-started)
@@ -45,7 +56,7 @@ routes.py - API route definitions.
 wsgi.py - Entry point for the WSGI server.
 ```
 
-### 2. Build and Run the application
+### 3. Build and Run the application
 
 Use Docker Compose to build and start services:
 
@@ -66,7 +77,7 @@ To access the application visit:
 https://localhost:443/
 ```
 
-### 3. API Endpoints 
+### 4. API Endpoints 
 
 * **Get Books:** [GET /api/books] - Retrieves a list of all books.
 * **Get a Book:** [GET /api/books/book_id] - Retrieves details of a specific book by its ID.
@@ -74,7 +85,21 @@ https://localhost:443/
 * **Update Book:** [PUT /api/books/book_id] - Updates the details of an existing book by its ID.
 * **Delete Book:** [DELETE /api/books/book_id] - Deletes a book from the collection by its ID.
 
-### 4. Stopping Application 
+#### Body 
+
+Example of the body fields
+
+```json
+{
+    "title": "Don Quijote de la Mancha",
+    "author": "Miguel de Cervantes",
+    "description": "A story about a nobleman who loses his sanity from reading chivalric romances and decides to become a knight-errant.",
+    "cover_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Don_Quijote_and_Sancho_Panza.jpg",
+    "availability": true
+}
+```
+
+### 5. Stopping Application 
 
 To stop application run
 
