@@ -12,7 +12,8 @@ services:
     networks:
       - backend-net
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     command: ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:5000", "wsgi:app"]
     restart: unless-stopped
 
@@ -27,6 +28,11 @@ services:
       - "5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bookuser -d books_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - backend-net
     restart: always
