@@ -1,3 +1,6 @@
 # Virtual environment
 venv/
 __pycache__/
+backup_server/dist/
+backup_server/node_modules/
+backup_server/.dockerignore
