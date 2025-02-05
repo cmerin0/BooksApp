@@ -17,6 +17,22 @@ services:
     command: ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:5000", "wsgi:app"]
     restart: unless-stopped
 
+  nodeapp:
+    build: ./backup_server/
+    image: node-app
+    container_name: book_app_backup
+    env_file:
+      - ./backup_server/.env
+    expose:
+      - "3000"
+    networks:
+      - backend-net
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: ["npm", "start"]
+    restart: unless-stopped
+
   postgres:
     image: postgres:alpine
     container_name: book_db
@@ -58,6 +74,7 @@ services:
       - ./nginx/certs/:/etc/nginx/certs/
     depends_on:
       - flaskapp
+      - nodeapp
     networks:
       - backend-net
     restart: unless-stopped

@@ -99,7 +99,7 @@ def create_book():
         session.commit()
 
         redis_client.delete(get_cache_key('get_books')) # Clear cache
-        return jsonify({ 'message': 'Book created successufully', 'ID': new_book.id }), 201
+        return jsonify({ 'message': 'Book created successufully' }), 201
     
     except Exception as e:
         session.rollback()
@@ -128,7 +128,7 @@ def update_book(book_id):
         redis_client.delete(get_cache_key('get_books'))
         redis_client.delete(get_cache_key('get_book', book_id))
 
-        return jsonify({ 'message': 'Book updated successully', 'Book': book.title })
+        return jsonify({ 'message': 'Book Updated Successully'})
 
     except Exception as e:
         session.rollback()
@@ -150,7 +150,7 @@ def delete_book(book_id):
         redis_client.delete(get_cache_key('get_books'))
         redis_client.delete(get_cache_key('get_book', book_id))
 
-        return jsonify({ 'message': 'Book Deleted successfully', 'ID': book.id })
+        return jsonify({ 'message': 'Book Deleted Successfully', 'ID': book.id })
 
     except Exception as e:
         session.rollback()
